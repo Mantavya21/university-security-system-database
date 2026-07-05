@@ -1,11 +1,3 @@
--- =====================================================================
--- University Security System Database — Schema (DDL)
--- Group 5C: Mantavya Bhojani (202403028), Chovatiya Yash (202403006)
---
--- Normalized relational schema. Run this file against a fresh
--- PostgreSQL database to create all tables in the correct order.
--- =====================================================================
-
 -- 1. Person: base entity for the ISA hierarchy (Student / Visitor / Guard)
 DROP TABLE IF EXISTS Person CASCADE;
 CREATE TABLE Person (
@@ -135,9 +127,7 @@ CREATE TABLE Rides_Visitor (
     PRIMARY KEY (Cart_No, Visitor_ID)
 );
 
--- =====================================================================
 -- Function: get a student's full name from their Student_ID
--- =====================================================================
 CREATE OR REPLACE FUNCTION GetStudentName(s_id INT)
 RETURNS VARCHAR(80) AS $$
 DECLARE
@@ -152,9 +142,7 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- =====================================================================
 -- Trigger: auto-mark a lost item as 'Claimed' when a Claim is inserted
--- =====================================================================
 CREATE OR REPLACE FUNCTION UpdateLostItemStatus()
 RETURNS TRIGGER AS $$
 BEGIN
