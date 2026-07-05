@@ -29,7 +29,7 @@ This project designs a relational database that replaces those manual processes 
 
 ## 🧩 Entity-Relationship Diagram
 
-!['ER Diagram'](er-diagram.jpg)
+(in ['ER Diagram'](er-diagram.jpg))
 
 ## 🏗️ Database Design
 
