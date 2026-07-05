@@ -29,11 +29,11 @@ This project designs a relational database that replaces those manual processes 
 
 ## 🧩 Entity-Relationship Diagram
 
-![ER Diagram](diagrams/er-diagram.jpg)
+![ER Diagram](er-diagram.jpg)
 
 ## 🏗️ Database Design
 
-The schema went through raw entity extraction → relational mapping → normalization. The final normalized design (in [`database/schema.sql`](database/schema.sql)) includes:
+The schema went through raw entity extraction → relational mapping → normalization. The final normalized design (in [`schema.sql`](schema.sql)) includes:
 
 | Table | Purpose |
 |---|---|
@@ -52,7 +52,7 @@ It also includes:
 
 ## 🔍 Sample Queries
 
-[`database/queries.sql`](database/queries.sql) has 40 queries grouped into five sections:
+[`queries.sql`](queries.sql) has 40 queries grouped into five sections:
 
 1. Basic filtering & sorting
 2. Joins across entities
@@ -75,8 +75,7 @@ psql -d security_database -f database/queries.sql
 
 ## 📖 Full Documentation
 
-- [Software Requirements Specification (SRS)](docs/SRS.md) — purpose, scope, user classes, operating environment, product functions, privileges matrix, assumptions, and constraints.
-- [Fact-Finding References](docs/references.md) — background articles, interviews, and questionnaire used to derive requirements.
+- [Software Requirements Specification (SRS)](SRS.md) — purpose, scope, user classes, operating environment, product functions, privileges matrix, assumptions, and constraints.
 
 ## 🔗 Related Repo
 
