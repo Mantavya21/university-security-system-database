@@ -14,7 +14,7 @@ Built for our DBMS coursework by **Group 5C**:
 
 Most universities still track campus security on paper — handwritten visitor registers, verbal guard shift handovers, incident reports scattered across notebooks. This leads to missing records, slow gate queues, and no reliable answer to "who is on campus right now?"
 
-This project designs a relational database that replaces those manual processes with structured, queryable data. Full context — problem statement, stakeholder interviews, and background research — is in [`docs/SRS.md`](docs/SRS.md).
+This project designs a relational database that replaces those manual processes with structured, queryable data. Full context — problem statement, stakeholder interviews, and background research — is in [`docs/SRS.md`](SRS.md).
 
 ## 🗂️ Repository structure
 
