@@ -1,11 +1,6 @@
 # Software Requirements Specification (SRS)
 ## University Security System Database
 
-**Team:** Group 5C
-- Mantavya Bhojani (202403028)
-- Chovatiya Yash (202403006)
-
----
 
 ## 1. Purpose
 
@@ -58,8 +53,6 @@ Advanced features (CCTV integration, mobile app, AI-based monitoring) are intent
 | C | Times of India — sticker rollout blame game | Bureaucratic delays from missing student data justify a dedicated **Student Vehicle Registration** table. |
 | D | Acoem India — *6 ways to improve campus safety* | Manual paper records fail to provide accountability for unauthorized entry. |
 | E | VersionX blog — unified campus security platforms | Justifies a **unified database design** consolidating visitors, vehicles, and guard operations. |
-
-Full reference links are kept in [`references.md`](references.md).
 
 ### 4.2 Interviews
 
