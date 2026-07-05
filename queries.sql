@@ -1,16 +1,3 @@
--- =====================================================================
--- University Security System Database — Sample Queries
--- Group 5C: Mantavya Bhojani (202403028), Chovatiya Yash (202403006)
---
--- 40 queries demonstrating filtering, joins, aggregation, subqueries,
--- CTEs, window functions, a stored function, and a trigger.
--- Run schema.sql first.
--- =====================================================================
-
--- ---------------------------------------------------------------------
--- SECTION 1: Basic filtering & sorting
--- ---------------------------------------------------------------------
-
 -- Q1: All 'High' severity incidents
 SELECT Incident_No, Type, Description, TimeReported FROM Incident WHERE Severity = 'High';
 
@@ -54,10 +41,6 @@ SELECT Guard_ID, Place, StartTime, EndTime, Person_ID FROM Guard WHERE StartTime
 -- Q13: Lost items with 'laptop' in the description
 SELECT * FROM LostItem WHERE Description ILIKE '%laptop%';
 
--- ---------------------------------------------------------------------
--- SECTION 2: Joins across entities
--- ---------------------------------------------------------------------
-
 -- Q14: Full names and phone numbers of all students
 SELECT p.Person_Name, p.Phone, s.Student_ID
 FROM Person p
@@ -88,10 +71,6 @@ JOIN Guard g ON p.Person_ID = g.Person_ID
 JOIN Parcel par ON g.Guard_ID = par.Guard_ID
 GROUP BY p.Person_Name
 ORDER BY ParcelCount DESC;
-
--- ---------------------------------------------------------------------
--- SECTION 3: Subqueries
--- ---------------------------------------------------------------------
 
 -- Q19: Students who own a 'Car'
 SELECT p.Person_Name
@@ -255,14 +234,9 @@ FROM (
     GROUP BY v.Visitor_ID
 ) AS VisitorRides;
 
--- ---------------------------------------------------------------------
--- SECTION 5: Function & trigger demo (defined in schema.sql)
--- ---------------------------------------------------------------------
-
 -- Q39: Use the GetStudentName() function
 SELECT GetStudentName(1);
 
--- Q40: Trigger demo — inserting into Claim auto-updates LostItem.Status to 'Claimed'
--- (See trg_AfterClaimInsert in schema.sql)
--- INSERT INTO Claim (Item_No, Claim_Date, Claimer_Details) VALUES (3, CURRENT_DATE, 'Verified by ID card');
--- SELECT Status FROM LostItem WHERE Item_No = 3;  -- now returns 'Claimed'
+-- Q40: Trigger demo — inserting into Claim auto-updates LostItem.Status to 'Claimed' (See trg_AfterClaimInsert in schema.sql)
+INSERT INTO Claim (Item_No, Claim_Date, Claimer_Details) VALUES (3, CURRENT_DATE, 'Verified by ID card');
+SELECT Status FROM LostItem WHERE Item_No = 3;  -- now returns 'Claimed'
